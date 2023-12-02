@@ -17,6 +17,7 @@ var PAGE_TITLE, PAGE_IMAGE, PAGE_BUTTONS;
 </script>
 </head>
 <body class="black-cover no-shadow">
+<!-- Edit <body> class to change theme... There are 4 fully functional theme !-->
     
 <div class="page-container col-12 overflow-y-scroll hide">
     
@@ -51,7 +52,6 @@ var PAGE_TITLE, PAGE_IMAGE, PAGE_BUTTONS;
     
 </div>
 
-
 <div class="hide page-site-name fixed pull-bottom-left w-100 text-center"><a href="#">Neqti</a></div>
 
 <script>
@@ -59,7 +59,7 @@ var PAGE_TITLE, PAGE_IMAGE, PAGE_BUTTONS;
 PAGE_IMAGE = "src/a.jpg",
 //page title
 PAGE_TITLE = "Choose what you want!!",
-//
+//page buttons
 PAGE_BUTTONS = [
     //[0] => Title
     //[1] => Image
@@ -87,65 +87,7 @@ PAGE_BUTTONS = [
                                   ],
 ];
 
-/** another method..
-PAGE_BUTTONS[5] = [
-    "Play this Video",
-    "media/e.jpg"
-    ]; */
-
 !function(t,p){var n,a,e=t("<div>"),i=t(".template").html(),l={},r=t(".page-buttons"),h="#";function o(n,a,o){l.button={title:n,img:a,url:o||h},o&&(h=o),e.html(t.literals(i,l)).children().appendTo(r)}a=(n=p).buttons,t(".page-avatar").literals(n),t(".page-title").literals(n),t.each(a,function(t){o.apply(null,t)}),t(".page-container").removeClass("hide");var s=t("head > title").html(),c=location.href;t(".share-icon").on("click",function(){navigator.share?navigator.share({title:s,url:c}).then(function(){alert("Thanks for sharing!")}).catch(function(t){alert("Opps: You didn't share!")}):alert("You can't share on this browser.")})}(Neqti,{image:PAGE_IMAGE,title:PAGE_TITLE,buttons:PAGE_BUTTONS});
-</script>
-
-<script>
-/*
-!(function ($) {
-var blank = $("<div>"),
-    template = $(".template").html(),
-    data = {},
-    page_buttons = $(".page-buttons"),
-    last_link = "#";//for default link
-    
-function button( title, img, url ) {
-  data.button = { title:title, img:img, url:(url||last_link) };
-  
-  //new last_link
-  if ( url ) last_link = url;
-  
-  blank.html( $.literals( template, data ) ).children().appendTo(page_buttons)
-}
-//example
-/** button( Title, Image, Link ) **/
-//button("Join Telegram Group Now", "media/c.jpg");
-/*
-function loadPage( page ) {
-  var buttons = page.buttons;
-  
-  $( ".page-avatar" ).literals( page );
-  $( ".page-title" ).literals( page );
-  
-  //creating buttons
-  $.each( buttons, function( array ) {
-      button.apply( null, array )
-  } )
-}
-
-loadPage( page );
-
-var title = $("head > title").html(),
-    url = location.href;
-    $(".share-icon").on("click", function() {
-        navigator.share
-            ? navigator
-                  .share({ title: title, url: url })
-                  .then(function() {
-                      alert("Thanks for sharing!")
-                  })
-                  .catch(function(e) {
-                      alert("Opps: You didn't share!")
-                  })
-            : alert("You can't share on this browser.")
-    });
-})(Neqti);*/
 </script>
 </body>
 </html>
